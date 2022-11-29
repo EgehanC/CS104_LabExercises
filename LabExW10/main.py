@@ -103,6 +103,10 @@ def writeNLetters(n):
             f.write(alphabet[index])
             index += 1
         f.write("\n")
+    for k in range(remainder):
+        f.write(alphabet[index])
+        index += 1
     f.close()
 
-# writeNLetters(3)
+
+writeNLetters(3)
