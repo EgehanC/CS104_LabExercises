@@ -71,31 +71,31 @@ def insertion_sort(list):
 def search(word, list):
     high = len(list) - 1
     low = 0
-    while high != low:
+    while high >= low:
         mid = (high + low) // 2
         if list[mid] == word:
             return f"Word: {word}, İndex:  {mid}"
         else:
             if list[mid] < word:
-                low = mid
+                low = mid + 1
             else:
-                high = mid
+                high = mid - 1
     return None
 
 
 def main():
     list = turn_to_list("Alice-in-Wonderland.txt")
     insertion_sort(list)
-    word = input("What word would you like to search? (type 'exit' to stop searching)")
+    word = input("What word would you like to search? (type 'exit' to stop searching) \n")
     while word != "exit":
         result = search(word, list)
         if result is None:
             print("Word could not be found")
         else:
             print(result)
-        word = input("What word would you like to search? (type 'exit' to stop searching)")
+        word = input("What word would you like to search? (type 'exit' to stop searching) \n")
 
     print("Exitted search")
 
 
-# main()
+main()
