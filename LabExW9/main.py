@@ -12,7 +12,7 @@ def collapse(nl):
 
 num_list = [7, 2, 8, 9, 4, 13, 7, 1, 9, 10]
 
-### collapse(num_list)
+# collapse(num_list)
 
 
 # Exercise 2
@@ -67,9 +67,9 @@ def fancy_output():
         print(f"|    {j}    	|    {included_letters[j]}       	|")
 
 
-### sentence = input("Enter your sentence here >>> ").lower().replace(" ", "")
-### count_letters(sentence)
-### fancy_output()
+# sentence = input("Enter your sentence here >>> ").lower().replace(" ", "")
+# count_letters(sentence)
+# fancy_output()
 
 
 # Exercise 3
@@ -120,6 +120,5 @@ def main():
     print("|---	|---	|---	|")
     for i in simulated_counts:
         print(f"| {i} 	| {simulated_counts[i] / 10} 	| {expected_percents[i]}  |")
-
 
 # main()

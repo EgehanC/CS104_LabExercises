@@ -26,7 +26,7 @@ def main1():
     print("----------------------------------")
 
 
-main1()
+# main1()
 
 # Exercise 2
 count = 0
@@ -50,8 +50,7 @@ def main2():
     print("------------------------------------")
     print(f'Moves required to complete: {count}')
 
-
-main2()
+# main2()
 
 
 
