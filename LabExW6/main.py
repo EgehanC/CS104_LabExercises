@@ -83,9 +83,9 @@ def isPalindrome():
         first_index += 1
         last_index -= 1
 
-    if r == True:
+    if r:
         print(f"{word} is a Palindrome!")
-    elif r == False:
+    else:
         print(f"{word} is not a Palindrome.")
 
 

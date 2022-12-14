@@ -5,10 +5,10 @@
 # S034206
 
 # ### Exercise 1
-fib_nums = [1, 2]
 
 
 def fibs():
+    fib_nums = [1, 2]
     n = int(input("Calculate n fibonacci numbers. \nn = "))
     index = 0
     while len(fib_nums) < n:
@@ -23,6 +23,8 @@ fibs()
 # ### Exercise 2
 
 from random import randint
+
+
 def dice_sum():
     desired_sum = int(input("What is the desired sum? "))
     while not desired_sum in range(2, 13):
@@ -35,6 +37,7 @@ def dice_sum():
         print(f"{dice1} + {dice2} = {sum}")
     print("Got it!")
 
+
 dice_sum()
 
 # ### Exercise 3
@@ -43,45 +46,21 @@ prime_factors = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,
 
 
 def findLCM(n1, n2):
-    n1_org = n1
-    n2_org = n2
-    # Calculating prime factor format of the two number
-    n1_prime_factors = []
-    n2_prime_factors = []
-    for i in prime_factors:
-        if i < n1_org*n2_org+1:
-            if n1 % i == 0:
-                while n1 % i == 0:
-                    n1_prime_factors.append(i)
-                    n1 /= i
-            if n2 % i == 0:
-                while n2 % i == 0:
-                    n2_prime_factors.append(i)
-                    n2 /= i
-    # Iterating over 2 prime factors
-    lcm = 1
-    index = 0
-    while index < len(n1_prime_factors) and index < len(n2_prime_factors):
-        if n1_prime_factors[index] == n2_prime_factors[index]:
-            lcm *= n1_prime_factors[index]
-        else:
-            lcm *= n1_prime_factors[index]
-            lcm *= n2_prime_factors[index]
-        index += 1
-    if index > len(n1_prime_factors):
-        while index > len(n1_prime_factors):
-            lcm *= n1_prime_factors[index]
-            index += 1
-    elif index > len(n2_prime_factors):
-        while index > len(n2_prime_factors):
-            lcm *= n2_prime_factors[index]
-            index += 1
-    print(f"LCM({n1_org}, {n2_org}) = {lcm}")
+    def gcd(a, b):
+        if a == 0:
+            return b
+        return gcd(b % a, a)
+
+    def lcm(a, b):
+        return (a / gcd(a, b)) * b
+
+    print(lcm(n1, n2))
 
 
 n1 = int(input("First Number? "))
 n2 = int(input("Second Number? "))
 findLCM(n1, n2)
+
 
 ### Exercise 4
 def get_row(r):
@@ -99,6 +78,7 @@ def print_triangle(height):
         get_row(r)
         print()
         space -= 1
+
 
 height = int(input("Height = "))
 print_triangle(height)
