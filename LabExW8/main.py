@@ -4,7 +4,7 @@
 # finds divisors of n using quadrativ sieve
 def divisor_gen(n):
     divisors = []
-    for i in range(1, int(n**0.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         if n % i == 0:
             yield i
             if i != n / i:
@@ -17,18 +17,17 @@ def divisors(n):
     return [d for d in divisor_gen(n)]
 
 
-
 # Categorizes the number given a number
 def isPerfect(n):
     divs = divisors(n)
     # removing the last divisor (itself)
     divs.pop(-1)
-    
+
     # Summing it's divisors
     sum_of_divs = 0
     for divisor in divs:
         sum_of_divs += divisor
-    
+
     # Categorizing the number
     if sum_of_divs == n:
         perfect_list.append(n)
@@ -39,14 +38,14 @@ def isPerfect(n):
 
 
 # İnitializing the lists
-perfect_list = [] 
+perfect_list = []
 abundant_list = []
 deficient_list = []
 
 
 def main():
     n = int(input("I want to check numbers up to n, n = "))
-    for n in range(2, n+1):
+    for n in range(2, n + 1):
         isPerfect(n)
     print(f"\nPerfect numbers are {perfect_list} \n")
     print(f"Abundant nubmers are {abundant_list} \n")
