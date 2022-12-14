@@ -11,6 +11,7 @@ def ask_number():
 
 ask_number()
 
+
 # Exercise 2
 
 def isPrimeNumber(n):
@@ -19,7 +20,7 @@ def isPrimeNumber(n):
         while n % 2 == 0:
             n /= 2
         dividers_of_x.append(2)
-    for i in range(3, round(n**1/2)):
+    for i in range(3, round(n ** 1 / 2)):
         if n % i == 0:
             dividers_of_x.append(i)
 
@@ -28,7 +29,10 @@ def isPrimeNumber(n):
     elif len(dividers_of_x) <= 2:
         return True
 
+
 prime_list = []
+
+
 def prime():
     n = 2
     while len(prime_list) < 20:
@@ -37,11 +41,13 @@ def prime():
         n += 1
     print(f"The first 20 prime numbers are {prime_list}")
 
+
 prime()
 
 # Exercise 3
 
 from random import randint
+
 
 def guess_game():
     num = randint(1, 101)
@@ -54,6 +60,7 @@ def guess_game():
             print("Too high")
         elif guess < num:
             print("Too low")
+
 
 guess_game()
 
