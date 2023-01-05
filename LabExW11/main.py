@@ -50,19 +50,8 @@ def main2():
     print("------------------------------------")
     print(f'Moves required to complete: {count}')
 
-# main2()
 
-
-
-
-
-
-
-
-
-
-
-
+main2()
 
 
 
