@@ -38,7 +38,8 @@ def squareRootBinary(x, e):
     print(f"Time: {end - start}")
 
 
-# squareRootBinary(169, 0.001)
+# squareRootBinary(81247012471298, 0.00000001)
+
 
 # Exercise 3
 def no_punc_lower(s):
@@ -97,5 +98,4 @@ def main():
 
     print("Exitted search")
 
-
-main()
+# main()
