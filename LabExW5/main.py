@@ -2,7 +2,7 @@
 
 # ### Exercise 1:
 
-# Inceasing amount of stars
+# Increasing amount of stars
 def up():
     counter1 = 1
     counter2 = 4
